@@ -1,7 +1,5 @@
 package Exercise178;
 
-import java.util.InputMismatchException;
-
 public class Account {
 	Integer number;
 	String Holder;
@@ -13,15 +11,10 @@ public class Account {
 	}
 
 	public Account(Integer number, String holder, Double balance, Double withdrawLimit) {
-		try {
-			this.number = number;
-			this.Holder = holder;
-			this.Balance = balance;
-			this.withdrawLimit = withdrawLimit;
-			
-		} catch (InputMismatchException e) {
-			System.out.println("You have entered invalid charracters");
-		}
+		this.number = number;
+		this.Holder = holder;
+		this.Balance = balance;
+		this.withdrawLimit = withdrawLimit;
 	}
 
 	public Integer getNumber() {
@@ -70,8 +63,7 @@ public class Account {
 		} else {
 			System.out.println("Withdraw error: The amount exceeds withdraw limit");
 		}
-		
-		
+
 	}
 
 }
